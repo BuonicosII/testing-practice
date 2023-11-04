@@ -1,4 +1,4 @@
-const { capitalize, reverse, calculator } = require('./practice');
+const { capitalize, reverse, calculator, caesarCipher } = require('./practice');
 
 test("capitalize test", ()=> {
     expect(capitalize("ciao")).toBe("Ciao");
@@ -22,4 +22,8 @@ test("calculator multiply", ()=> {
 
 test("calculator divide", ()=> {
     expect(calculator.divide(15, 3)).toBe(5);
+});
+
+test("caesar cipher", ()=> {
+    expect(caesarCipher("De Bello Gallico")).toBe("Ef Cfmmp Hbmmjdp");
 });
