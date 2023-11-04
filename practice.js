@@ -32,7 +32,7 @@ function caesarCipher (string) {
     const cipheredArray = []
 
     for (const char of string.split("")) {
-        if (char === " ") {
+        if (/^[^a-zA-Z]+$/.test(char)) {
             cipheredArray.push(char);
         } else if (char === char.toUpperCase()) {
             let index = alphabetArray.indexOf(char.toLowerCase());
