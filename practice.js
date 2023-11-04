@@ -48,4 +48,15 @@ function caesarCipher (string) {
     return cipheredArray.join("")
 }
 
-module.exports = {capitalize, reverse, calculator, caesarCipher} ;
+function analyzeArray(array) {
+
+    return {
+        average: array.reduce((accumulator, currentValue) => accumulator + currentValue) / array.length,
+        min: array.reduce((currentMin, currentValue) => Math.min(currentMin, currentValue)),
+        max: array.reduce((currentMax, currentValue) => Math.max(currentMax, currentValue)),
+        length: array.length
+
+    }
+}
+
+module.exports = {capitalize, reverse, calculator, caesarCipher, analyzeArray} ;
